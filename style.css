@@ -1,0 +1,279 @@
+/* --- General Styles --- */
+:root {
+    --anna-primary: #edc213;
+    --anna-secondary: #8a0f1f;
+    --anna-text: #fff;
+
+    --rosevida-primary: #333;
+    --rosevida-secondary: #007bff;
+    --rosevida-text: #fff;
+    --rosevida-bg-light: #f0f8ff;
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--anna-primary);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--anna-primary);
+    color: white;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: #7a5e52;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: var(--anna-primary);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown .dropbtn:focus + .dropdown-content {
+  display: block;
+}
+
+/* --- Profile Sections --- */
+.profile-section {
+    min-height: 80vh;
+    padding: 80px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anna-fe-bg, .rodelyn-bg, .louize-bg {
+    background-color: var(--anna-secondary);
+    color: var(--anna-text);
+}
+
+.rosevida-bg {
+    background-color: var(--rosevida-bg-light);
+    color: var(--rosevida-primary);
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+
+.profile-content.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-text .greeting {
+    font-size: 1.2em;
+    color: var(--anna-primary);
+    margin-bottom: 5px;
+}
+
+.rosevida-bg .profile-text .greeting {
+    color: var(--rosevida-secondary);
+}
+
+.profile-text h1 {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--anna-primary);
+}
+
+.rosevida-bg .profile-text h1 {
+    color: var(--rosevida-primary);
+}
+
+.profile-text p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.profile-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo img {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.anna-fe-bg .btn, .rodelyn-bg .btn, .louize-bg .btn {
+    background-color: var(--anna-primary);
+    color: var(--anna-text);
+}
+
+.anna-fe-bg .btn:hover, .rodelyn-bg .btn:hover, .louize-bg .btn:hover {
+    transform: translateY(-3px);
+    background-color: #7a5e52;
+}
+
+.rosevida-bg .btn, .rapael-bg .btn {
+    background-color: var(--rosevida-secondary);
+    color: var(--rosevida-text);
+}
+
+.rosevida-bg .btn:hover, .rapael-bg .btn:hover {
+    transform: translateY(-3px);
+    background-color: #0056b3;
+}
+
+/* --- Contact Section --- */
+.contact-info {
+    text-align: center;
+    padding: 50px 5%;
+    background-color: #fff;
+}
+
+.contact-info h2 {
+    font-family: var(--font-heading);
+    color: var(--anna-primary);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--rosevida-primary);
+    color: var(--rosevida-text);
+    font-size: 0.9em;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .dropdown {
+        margin-top: 10px;
+    }
+
+    .profile-content,
+    .profile-content.reverse-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-text {
+        order: 2;
+    }
+
+    .profile-photo {
+        order: 1;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-text h1 {
+        font-size: 2em;
+    }
+    
+    .profile-section {
+        padding: 50px 5%;
+    }
+}
